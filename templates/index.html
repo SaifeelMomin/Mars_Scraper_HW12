@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <title>Mars Scraper</title>
+
+    </head>
+
+    <body>
+        <div style="text-align:center">
+            <h1> Mission to Mars</h1>
+            <div>
+                <form action="/scrape" method="post">
+                    <button type="submit" class="btn btn-success" type="button">Scrape New Data</button>
+                </form>
+            </div>
+
+        </div>
+        <!-- ADD BUTTON FOR 'SCRAPE NEW DATA' -->
+        <div class = 'panel panel-primary'>
+            <div class="panel-heading"><h2>Latest Mars News</h2></div>
+            <div class="panel-body">
+                <div class = 'row'>
+                    <h3> {{news_title}}</h3>
+                </div>
+                <div class = 'row'>
+                    <h4>{{news_p}}</h4>
+                </div>
+            </div>
+        </div>
+
+        <div class = 'row'>
+
+            <div class = "col-sm-12 col-md-8">
+
+                <div class = 'panel panel-success'>
+
+                    <div class="panel-heading"><h2>Featured Mars Image</h2></div>
+
+                    <div class="panel-body">
+                        <a href={{featured_img}}>
+                            <img src= {{featured_img}} alt = "" width = "100%" height="80%"/>
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class = "col-sm-6 col-md-4">
+                <div class = "row">
+                    <div class = 'panel panel-info'>
+
+                        <div class="panel-heading"><h2>Current Weather on Mars</h2></div>
+    
+                        <div class="panel-body">
+                            <h4>{{weather}}</h4>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+                <div class = "row">
+                    <div class = 'panel panel-success'>
+
+                        <div class="panel-heading"><h2>Mars Facts</h2></div>
+    
+                        <div class="panel-body">
+                            <h4>{{facts | safe }}</h4>
+                        </div>
+                    
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

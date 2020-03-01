@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <title>Mars Scraper</title>
+
+    </head>
+
+    <body>
+        <div><h1> Mars Hemispheres</h1></div>
+        <h3> {{news_title}}</h3>
+        <h4>{{news_p}}</h4>
+        <h4>{{weather}}</h4>
+        <a href={{featured_img}}>
+            <img src= {{featured_img}} alt = ""/>
+        </a>
+
+        <div>
+            <h4>{{hemi1[0]}}</h4>
+            <img src= {{hemi1[1]}} alt = ""/>
+        </div>
+        <div>
+            <h4>{{hemi2[0]}}</h4>
+            <img src= {{hemi2[1]}} alt = ""/>
+        </div>
+        <div>
+            <h4>{{hemi3[0]}}</h4>
+            <img src= {{hemi3[1]}} alt = ""/>
+        </div>
+        <div>
+            <h4>{{hemi4[0]}}</h4>
+            <img src= {{hemi4[1]}} alt = ""/>
+        </div>
+        <div>
+            {{facts | safe }}
+        </div>
+    </body>
+
+
+
+
+
+
+
+
+
+</html>

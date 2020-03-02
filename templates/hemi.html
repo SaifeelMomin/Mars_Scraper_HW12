@@ -28,7 +28,8 @@
                     <a class="btn btn-primary active" href="/" role="button"><h4>Mission Control</h4></a>
                 </div>
             </div>
-          </div>
+
+        </div>
 
         <div class = "container mt-3">
         <div id="mars" class="carousel slide" data-ride="carousel">
@@ -46,14 +47,18 @@
                 {% for hemi in marsData.hemispheres %}
                     {% if loop.first%}
                     <div class="carousel-item active">
-                        <img src={{hemi.img_url}} style = "height: 90%;">
+                        <a href={{hemi.img_url}} target="_blank">
+                            <img class="rounded img-fluid" src= {{hemi.img_url}} style = "height: 90%;"/>
+                        </a>
                         <div class="carousel-caption">
                             <h3>{{hemi.title}}</h3>
                         </div>                     
                     </div>
                     {% else %}
                     <div class="carousel-item">
-                        <img src={{hemi.img_url}} style = "height: 90%;" >
+                        <a href={{hemi.img_url}} target="_blank">
+                            <img class="rounded img-fluid" src= {{hemi.img_url}} style = "height: 90%;"/>
+                        </a>
                         <div class="carousel-caption">
                             <h3>{{hemi.title}}</h3>
                         </div> 
